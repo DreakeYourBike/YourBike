@@ -1,0 +1,87 @@
+:root{
+  --white: #f1faee;
+  --black: #0b090a;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+  
+}
+
+/*Empieza el header*/
+header{
+  width: 100vw;
+  background-color: var(--black);
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+.header--logo{
+  background-image: url("../multimedia/images/—Pngtree—mountain\ bike\ race_3290276.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  width: 45px;
+  height: 45px;
+  margin: 5px 0 5px 5px;
+}
+.header--list{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.header--list li a{
+  text-decoration: none;
+  color:var(--white);
+}
+/*Animacion de linea bottom header*/
+.header--list li a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.header--list li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header--list li a::before {
+  content: " ";
+  display: block;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: red;
+  z-index: -1;
+  transition: transform .3s ease;
+  border-radius: 20px;
+  height: 2px;
+  position: relative;
+  top: 17px;
+}
+.header--list li a {
+  position: relative;
+}
+/*Animacion de linea bottom header*/
+.header--list li:last-child{
+  margin-right: 15px;
+}
+
+
+/*Empieza el main*/
+
+
+/*Empieza el footer*/
