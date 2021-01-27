@@ -13,7 +13,6 @@ html{
 }
 body{
   overflow-x: hidden;
-  
 }
 
 /*Empieza el header*/
@@ -35,6 +34,7 @@ header{
   width: 45px;
   height: 45px;
   margin: 5px 0 5px 5px;
+  z-index: 4;
 }
 .header--list{
   list-style: none;
@@ -48,7 +48,6 @@ header{
   justify-content: center;
   align-items: center;
   transition: all 0.6s ease; 
-  background: rgb(11,9,10);
   background: linear-gradient(180deg, rgba(11,9,10,1) 50%, rgba(140,8,1,1) 86%, rgba(141,8,1,1) 100%); 
   gap: 50px;
 }
@@ -79,7 +78,7 @@ header{
   top: 0; right: 0; bottom: 0; left: 0;
   inset: 0 0 0 0;
   background: red;
-  z-index: 10;
+  z-index: 2;
   transition: transform .3s ease;
   border-radius: 20px;
   height: 2px;
@@ -97,7 +96,7 @@ header{
   background-color: transparent;
   height: 55px;
   padding: 0 8px;
-  z-index: 100;
+  z-index: 3;
   cursor: pointer;
 }
 .iconMenu span{
@@ -130,7 +129,7 @@ main{
   height: 400px;
 }
 .montainBike--imgBackground{
-  background-image:linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0, 0.2)), url('../multimedia/images/CiclasDeMontaña/montainBike.jpg');
+  background-image:linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0, 0.2)), url('../multimedia/images/MontainBIke/montainBike.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 
@@ -318,4 +317,14 @@ main{
 
 /*Empieza el footer*/
 footer{
+  width: 100vw;
+  height: 20px;
+  background-color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p{
+  font-weight: bold;
+  font-size: 1rem;
 }
