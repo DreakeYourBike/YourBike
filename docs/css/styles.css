@@ -1,5 +1,5 @@
 :root{
-  --white: #f1faee;
+  --white: #fdfffc;
   --black: #0b090a;
   --red: #8d0801;
 }
@@ -218,6 +218,9 @@ main{
   max-width: 360px;
   border-radius: 40px;
 }
+.roadBike--container-imgBike .imgBike:hover{
+  width: 95%;
+}
 /*Empieza el section de City Bike*/
 .section--cityBike{
   height: 400px;
@@ -264,6 +267,9 @@ main{
 .cityBike--container-imgBike .imgBike{
   width: 90%;
   max-width: 380px;
+}
+.cityBike--container-imgBike .imgBike:hover{
+  width: 95%;
 }
 /*Empieza el section del Contact Form*/
 .section--contactForm{

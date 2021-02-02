@@ -1,0 +1,23 @@
+
+body {
+  background: #eee;
+  font-family: 'Lily Script One';
+}
+.content {
+  position: absolute;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+.front{
+  background-color: white;
+}
+.back {
+  background: red;
+  color: white;
+  transform: rotateY( 180deg );
+}
+
