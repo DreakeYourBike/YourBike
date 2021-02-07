@@ -1,0 +1,336 @@
+:root{
+  --white: #fdfffc;
+  --black: #0b090a;
+  --red: #8d0801;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+
+/*Empieza el header*/
+header{
+  width: 100vw;
+  height: auto;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+.header--logo{
+  background-image: url("../multimedia/images/—Pngtree—mountain\ bike\ race_3290276.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  width: 45px;
+  height: 45px;
+  margin: 5px 0 5px 5px;
+  z-index: 4;
+}
+.header--list{
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease; 
+  background: linear-gradient(180deg, rgba(11,9,10,1) 50%, rgba(140,8,1,1) 86%, rgba(141,8,1,1) 100%); 
+  gap: 50px;
+}
+.one{
+  clip-path: inset(0 0 100% 0);
+}
+.two{
+  clip-path: inset(0 0 0 0);
+}
+.header--list li a{
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color:var(--white);
+}
+/*Animacion de linea bottom header*/
+.header--list li a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.header--list li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header--list li a::before {
+  content: " ";
+  display: block;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: red;
+  z-index: 2;
+  transition: transform .3s ease;
+  border-radius: 20px;
+  height: 2px;
+  position: relative;
+  top: 21px;
+}
+.header--list li a {
+  position: relative;
+}
+.iconMenu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: transparent;
+  height: 55px;
+  padding: 0 8px;
+  z-index: 3;
+  cursor: pointer;
+}
+.iconMenu span{
+  font-size: 20px;
+}
+
+
+/*Empieza el main*/
+main{
+  padding-top: 70px;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+}
+.section--home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-imgAboutUs{
+  width: 260px;
+}
+.home--container-textAboutUs p{
+  text-align: center;
+  margin: 10px;
+  font-size: 1.6rem;
+}
+/*Empieza el section de ciclas de montain*/
+.section--montainBike{
+  height: 400px;
+}
+.montainBike--imgBackground{
+  background-image:linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0, 0.2)), url('../multimedia/images/MontainBIke/montainBike.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  width: 100vw;
+  height: 400px;
+}
+.montainBike--container-articleBehind{
+  text-align: center;
+  font-weight: bold;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  bottom: 400px;
+}
+.montainBike--container-articleBehind h2{
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+  text-shadow: -3px 3px 2px var(--black);
+}
+.montainBike--container-articleBehind p{
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-shadow: -2px 2px 1px var(--black);
+}
+.montainBike--container-imgBike{
+  position: relative;
+  bottom: 380px;
+}
+.container--imgBike_link{
+  display: flex;
+  justify-content: center;
+}
+.montainBike--container-imgBike .imgBike{
+  width: 90%;
+  max-width: 430px;
+}
+.montainBike--container-imgBike .imgBike:hover{
+  width: 95%;
+}
+/*Empieza el section Road Bike*/
+.section--roadBike{
+  height: 450px;
+}
+.roadBike--imgBackground{
+  background-color: var(--black);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 450px;
+  max-height: 460px;
+}
+.roadBike--container-articleBehind{
+  text-align: center;
+  font-weight: bold;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  bottom: 450px;
+}
+.roadBike--container-articleBehind h2{
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+  text-shadow: -3px 3px 2px var(--black);
+}
+.roadBike--container-articleBehind p{
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-shadow: -2px 2px 1px var(--black);
+}
+.roadBike--container-imgBike{
+  position: relative;
+  bottom: 430px;
+}
+.roadBike--container-imgBike .imgBike{
+  width: 90%;
+  max-width: 360px;
+  border-radius: 40px;
+}
+.roadBike--container-imgBike .imgBike:hover{
+  width: 95%;
+}
+/*Empieza el section de City Bike*/
+.section--cityBike{
+  height: 400px;
+}
+.cityBike--imgBackground{
+  background-image:linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0, 0.2)), url('../multimedia/images/cityBike/photography-phone-nature-urban-street-hd-wallpaper-preview.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  width: 100vw;
+  height: 400px;
+}
+.cityBike--container-articleBehind{
+  text-align: center;
+  font-weight: bold;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  bottom: 400px;
+}
+.cityBike--container-articleBehind h2{
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+  text-shadow: -3px 3px 2px var(--black);
+}
+.cityBike--container-articleBehind p{
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-shadow: -2px 2px 1px var(--black);
+}
+.cityBike--container-imgBike{
+  position: relative;
+  bottom: 380px;
+}
+.container--imgBike_link{
+  display: flex;
+  justify-content: center;
+}
+.cityBike--container-imgBike .imgBike{
+  width: 90%;
+  max-width: 380px;
+}
+.cityBike--container-imgBike .imgBike:hover{
+  width: 95%;
+}
+/*Empieza el section del Contact Form*/
+.section--contactForm{
+  background-color: var(--black);
+  color: var(--white);
+  padding: 20px;
+}
+.container--contactForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.contactForm--name,
+.contactForm--email,
+.contactForm--reason{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.contactForm--name input,
+.contactForm--email input,
+.contactForm--reason textarea{
+  background-color: var(--red);
+  border: none;
+  height: 20px;
+  padding: 10px;
+  color: var(--white);
+  border-radius: 20px;
+  outline: none;
+}
+.contactForm--reason textarea{
+  resize: none;
+  height: 120px;
+}
+.container--contactForm button{
+  background-color: var(--red);
+  border: 2px solid var(--white);
+  padding: 5px;
+  border-radius: 10px;
+  color: var(--white);
+  padding-bottom: 8px;
+}
+
+
+
+/*Empieza el footer*/
+footer{
+  width: 100vw;
+  height: 20px;
+  background-color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p{
+  font-weight: bold;
+  font-size: 1rem;
+}

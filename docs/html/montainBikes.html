@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mountain Bikes</title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/montainBikes.css">
+</head>
+<body>
+  <header>
+    <figure class="header--logo"></figure>
+    <figure class="iconMenu" id="iconMenu">
+      <span>&#9776</span>
+    </figure>
+    <ul class="header--list one" id="header--list">
+      <li>
+        <a href="../index.html" class="start">Home</a>
+      </li>
+      <li>
+        <a href="#">Mountain Bikes</a>
+      </li>
+      <li>
+        <a href="./roadBikes.html">Road Bikes</a>
+      </li>
+      <li>
+        <a href="./cityBikes.html">City Bikes</a>
+      </li>
+      <li>
+        <a href="../index.html">Contact</a>
+      </li>
+    </ul>
+    <script src="../js/menuBurger.js"></script>
+  </header>
+  <main>
+    <section class="section--about">
+      <h1>Mountain Bikes</h1>
+      <p>This is where you come to get away from at all. From steep, technical trails to fast, flowing trails, our mountain bike collection has just what you need. Pick the perfect MTB and get ready to hit the mountain.</p>
+    </section>
+
+    <section class="section--accordion">
+      <nav class="accordion arrows">
+        <input type="radio" name="accordion" id="cb1" />
+        <section class="box">
+          <label class="box-title" for="cb1">Frame material</label>
+          <label class="box-close" for="acc-close"></label>
+          <form class="box-content" action="#">
+            <p>
+              <input type="checkbox" id="carbono" checked="checked" />
+              <label for="carbono">Carbono</label>
+            </p>
+            <p>
+              <input type="checkbox" id="aluminio" checked="checked" />
+              <label for="aluminio">Aluminio</label>
+            </p>
+          </form>
+        </section>
+
+        <input type="radio" name="accordion" id="cb2" />
+        <section class="box">
+          <label class="box-title" for="cb2">Price</label>
+          <label class="box-close" for="acc-close"></label>
+          <form class="box-content" action="#">
+            <p>
+              <input type="checkbox" id="1" checked="checked" />
+              <label class="label-1" for="1">Up to $10</label>
+            </p>
+            <p>
+              <input type="checkbox" id="2" checked="checked" />
+              <label class="label-2" for="2">$200 to $499</label>
+            </p>
+            <p>
+              <input type="checkbox" id="5" checked="checked" />
+              <label class="label-2" for="5">$500 to $749</label>
+            </p>
+            <p>
+              <input type="checkbox" id="7" checked="checked" />
+              <label class="label-2" for="7">$750 to $999</label>
+            </p>
+            <p>
+              <input type="checkbox" id="20" checked="checked" />
+              <label class="label-3" for="20">$2000 to $3499</label>
+            </p>
+            <p>
+              <input type="checkbox" id="35" checked="checked" />
+              <label class="label-3" for="35">$3500 to $5999</label>
+            </p>
+            <p>
+              <input type="checkbox" id="60" checked="checked" />
+              <label class="label-4" for="60">$6000 to $10000</label>
+            </p>
+          </form>
+        </section>
+        
+        <input type="radio" name="accordion" id="cb3" />
+        <section class="box">
+          <label class="box-title" for="cb3">Reviews</label>
+          <label class="box-close" for="acc-close"></label>
+          <section class="box-content rate">
+            <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
+          </section>
+        </section>
+
+        <input type="radio" name="accordion" id="cb4" />
+        <section class="box">
+          <label class="box-title" for="cb4">Size</label>
+          <label class="box-close" for="acc-close"></label>
+          <form class="box-content" action="#">
+            <p>
+              <input type="checkbox" id="size47" checked="checked" />
+              <label class="label-size" for="size47">47cm</label>
+            </p>
+            <p>
+              <input type="checkbox" id="size50" checked="checked" />
+              <label class="label-size" for="size50">50cm</label>
+            </p>
+            <p>
+              <input type="checkbox" id="size52" checked="checked" />
+              <label class="label-size" for="size52">52cm</label>
+            </p>
+            <p>
+              <input type="checkbox" id="size54" checked="checked" />
+              <label class="label-size" for="size54">54cm</label>
+            </p>
+            <p>
+              <input type="checkbox" id="size56" checked="checked" />
+              <label class="label-size" for="size56">56cm</label>
+            </p>
+            <p>
+              <input type="checkbox" id="size58" checked="checked" />
+              <label class="label-size" for="size58">58cm</label>
+            </p>
+          </form>
+        </section>
+
+        <input type="radio" name="accordion" id="cb5" />
+        <section class="box">
+          <label class="box-title" for="cb5">Model Year</label>
+          <label class="box-close" for="acc-close"></label>
+          <form class="box-content" action="#">
+            <p>
+              <input type="checkbox" id="modelYear19" checked="checked" />
+              <label class="label-modelYear" for="modelYear19">2019</label>
+            </p>
+            <p>
+              <input type="checkbox" id="modelYear20" checked="checked" />
+              <label class="label-modelYear" for="modelYear20">2020</label>
+            </p>
+            <p>
+              <input type="checkbox" id="modelYear21" checked="checked" />
+              <label class="label-modelYear" for="modelYear21">2021</label>
+            </p>
+          </form>
+        </section>
+        <input type="radio" name="accordion" id="acc-close" />
+      </nav>
+    </section>
+    <section class="section--products">
+        <a class="a" href="https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/trail-mountain-bikes/remedy/remedy-9-7-27-5/p/21624/">
+          <div class="container--products">
+            <p>HOT SALE</p>
+            <picture>
+              <img src="../multimedia/images/MontainBIke/remedy9.7-27.5-2018.png">
+            </picture>
+            <p class="bikeName">Remedy 9.7 27.5 - 2018</p>
+            <p class="bikePrice">3,599.99</p>
+            <p class="bikeReview">162 review</p>
+            <div>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>        
+          </div>
+          <div class="container--products-overlay">
+            <p class="subTitule">Details</p>
+            <p class="text">
+              Remedy is the mountain biker's mountain bike. 27.5? wheels, an aggressive geometry, and a wealth of technical features make a bike that scores tens for capability.
+
+              Want to push harder? Want more travel? Want more travel? Need a more capable build?
+              Remedy is your full suspension ride to the next level.
+            </p>
+            <p class="subTitule">Key features</p>
+            <ul class="list">
+              <li>Stout 150mm frame optimized for enduro and technical trails</li>
+              <li>Boost 148/110: stronger wheels, more tire clearence, shorter stays</li>
+              <li>Exclusive suspension tech with ABP, Full Floater, and RE:aktiv</li>
+              <li>Straigt Shot stiffnes, Knock Block frame defense</li>
+            </ul>
+          </div>
+        </a>
+
+        <a class="a" href="#">
+          <div class="container--products">
+            <p>HOT SALE</p>
+            <picture>
+              <img src="../multimedia/images/MontainBIke/specialized camber comp29/specialized camber comp29.png">
+            </picture>
+            <p class="bikeName">Camber Comp 29</p>
+            <p class="bikePrice">1,990.00</p>
+            <p class="bikeReview">307 review</p>
+            <div>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>        
+          </div>
+          <div class="container--products-overlay">
+            <p class="subTitule">Details</p>
+            <p class="text">
+              The 110mm-travel Camber FSR Comp utilizes an M5 alloy frame, custom SRAM S-1250, 10-speed XC Trail double crankset, and 110mm of travel to create an ultra-capable trail machine.
+            </p>
+            <p class="subTitule">Key features</p>
+            <ul class="list">
+              <li>SRAM X5, 10-speed, mid cage rear derailleur for lightweight, pinpoints shifts</li>
+              <li>Custom SRAM crankset for stiff, yet lightweight pedaling perfomance</li>
+              <li>lightweight and compliant specialized alloy seatpost</li>
+              <li>Roval 29 rims w/Hi Lo hubs are lightweight and durable for smooth handing at speed</li>
+              <li>Custom Fox Float CTD Evolution Series shock w/AUTOSAG for premium on-trail perfomance</li>
+              <li>Shimano Deore hydraulic disc brakes for total control and stopping power</li>
+              <li>M5 alloy FSR frame w/29er geometry and 110mm of travel for a lightweight trail weapon</li>
+              <li>Custom RockShox Reba RC 110mm-travel fork w/15mm thru-axle provides XC traction and control</li>
+            </ul>
+          </div>
+        </a>
+        <a class="a" href="#">
+          <div class="container--products">
+            <p>HOT SALE</p>
+            <picture>
+              <img src="../multimedia/images/MontainBIke/remedy9.7-27.5-2018.png">
+            </picture>
+            <p class="bikeName">Remedy 9.7 27.5 - 2018</p>
+            <p class="bikePrice">3,599.99</p>
+            <p class="bikeReview">162 review</p>
+            <div>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>        
+          </div>
+          <div class="container--products-overlay">
+            <p class="subTitule">Details</p>
+            <p class="text">
+              Remedy is the mountain biker's mountain bike. 27.5? wheels, an aggressive geometry, and a wealth of technical features make a bike that scores tens for capability.
+
+              Want to push harder? Want more travel? Want more travel? Need a more capable build?
+              Remedy is your full suspension ride to the next level.
+            </p>
+            <p class="subTitule">Key features</p>
+            <ul class="list">
+              <li>Stout 150mm frame optimized for enduro and technical trails</li>
+              <li>Boost 148/110: stronger wheels, more tire clearence, shorter stays</li>
+              <li>Exclusive suspension tech with ABP, Full Floater, and RE:aktiv</li>
+              <li>Straigt Shot stiffnes, Knock Block frame defense</li>
+            </ul>
+          </div>
+        </a>
+
+        <a class="a" href="#">
+          <div class="container--products">
+            <p>HOT SALE</p>
+            <picture>
+              <img src="../multimedia/images/MontainBIke/specialized camber comp29/specialized camber comp29.png">
+            </picture>
+            <p class="bikeName">Camber Comp 29</p>
+            <p class="bikePrice">1,990.00</p>
+            <p class="bikeReview">307 review</p>
+            <div>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>        
+          </div>
+          <div class="container--products-overlay">
+            <p class="subTitule">Details</p>
+            <p class="text">
+              The 110mm-travel Camber FSR Comp utilizes an M5 alloy frame, custom SRAM S-1250, 10-speed XC Trail double crankset, and 110mm of travel to create an ultra-capable trail machine.
+            </p>
+            <p class="subTitule">Key features</p>
+            <ul class="list">
+              <li>SRAM X5, 10-speed, mid cage rear derailleur for lightweight, pinpoints shifts</li>
+              <li>Custom SRAM crankset for stiff, yet lightweight pedaling perfomance</li>
+              <li>lightweight and compliant specialized alloy seatpost</li>
+              <li>Roval 29 rims w/Hi Lo hubs are lightweight and durable for smooth handing at speed</li>
+              <li>Custom Fox Float CTD Evolution Series shock w/AUTOSAG for premium on-trail perfomance</li>
+              <li>Shimano Deore hydraulic disc brakes for total control and stopping power</li>
+              <li>M5 alloy FSR frame w/29er geometry and 110mm of travel for a lightweight trail weapon</li>
+              <li>Custom RockShox Reba RC 110mm-travel fork w/15mm thru-axle provides XC traction and control</li>
+            </ul>
+          </div>
+        </a>
+    </section>
+  </main>
+  <footer>
+    <p>All rights reserved</p>
+  </footer>
+</body>
+</html>
