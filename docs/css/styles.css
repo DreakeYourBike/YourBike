@@ -126,16 +126,12 @@ main{
 }
 /*Empieza el section de ciclas de montain*/
 .section--montainBike{
-  height: 400px;
-}
-.montainBike--imgBackground{
+  height: auto;
   background-image:linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0, 0.2)), url('../multimedia/images/MontainBIke/montainBike.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 
   background-attachment: fixed;
-  width: 100vw;
-  height: 400px;
 }
 .montainBike--container-articleBehind{
   text-align: center;
@@ -146,8 +142,6 @@ main{
   justify-content: center;
   align-items: center;
   padding: 15px;
-  position: relative;
-  bottom: 400px;
 }
 .montainBike--container-articleBehind h2{
   font-size: 2.8rem;
@@ -158,10 +152,6 @@ main{
   font-size: 1.3rem;
   line-height: 1.8rem;
   text-shadow: -2px 2px 1px var(--black);
-}
-.montainBike--container-imgBike{
-  position: relative;
-  bottom: 380px;
 }
 .container--imgBike_link{
   display: flex;
@@ -176,16 +166,12 @@ main{
 }
 /*Empieza el section Road Bike*/
 .section--roadBike{
-  height: 450px;
-}
-.roadBike--imgBackground{
+  height: auto;
   background-color: var(--black);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100vw;
-  height: 450px;
-  max-height: 460px;
+  padding: 0  0 20px 0;
 }
 .roadBike--container-articleBehind{
   text-align: center;
@@ -196,8 +182,6 @@ main{
   justify-content: center;
   align-items: center;
   padding: 15px;
-  position: relative;
-  bottom: 450px;
 }
 .roadBike--container-articleBehind h2{
   font-size: 2.8rem;
@@ -209,10 +193,6 @@ main{
   line-height: 1.8rem;
   text-shadow: -2px 2px 1px var(--black);
 }
-.roadBike--container-imgBike{
-  position: relative;
-  bottom: 430px;
-}
 .roadBike--container-imgBike .imgBike{
   width: 90%;
   max-width: 360px;
@@ -223,16 +203,12 @@ main{
 }
 /*Empieza el section de City Bike*/
 .section--cityBike{
-  height: 400px;
-}
-.cityBike--imgBackground{
+  height: auto;
   background-image:linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0, 0.2)), url('../multimedia/images/cityBike/photography-phone-nature-urban-street-hd-wallpaper-preview.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 
   background-attachment: fixed;
-  width: 100vw;
-  height: 400px;
 }
 .cityBike--container-articleBehind{
   text-align: center;
@@ -243,8 +219,6 @@ main{
   justify-content: center;
   align-items: center;
   padding: 15px;
-  position: relative;
-  bottom: 400px;
 }
 .cityBike--container-articleBehind h2{
   font-size: 2.8rem;
@@ -255,10 +229,6 @@ main{
   font-size: 1.3rem;
   line-height: 1.8rem;
   text-shadow: -2px 2px 1px var(--black);
-}
-.cityBike--container-imgBike{
-  position: relative;
-  bottom: 380px;
 }
 .container--imgBike_link{
   display: flex;
