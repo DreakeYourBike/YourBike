@@ -1,23 +1,91 @@
+:root{
+  --white: #fdfffc;
+  --black: #0b090a;
+  --red: #8d0801;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
 
-body {
-  background: #eee;
-  font-family: 'Lily Script One';
+/*Empieza el header*/
+header{
+  width: 100vw;
+  height: auto;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
 }
-.content {
-  position: absolute;
-  transition: transform 1s;
-  transform-style: preserve-3d;
+.header--logo{
+  background-image: url("../multimedia/images/—Pngtree—mountain\ bike\ race_3290276.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  width: 45px;
+  height: 45px;
+  margin: 5px 0 5px 5px;
+  z-index: 4;
 }
-.card:hover .content {
-  transform: rotateY( 180deg ) ;
-  transition: transform 0.5s;
+.header--list{
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+  margin-right: 10px;
 }
-.front{
-  background-color: white;
+.header--list li a{
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-decoration: none;
+  color:var(--white);
 }
-.back {
+/*Animacion de linea bottom header*/
+.header--list li a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.header--list li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header--list li a::before {
+  content: " ";
+  display: block;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
   background: red;
-  color: white;
-  transform: rotateY( 180deg );
+  z-index: 2;
+  transition: transform .3s ease;
+  border-radius: 20px;
+  height: 2px;
+  position: relative;
+  top: 21px;
+}
+.iconMenu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: transparent;
+  height: 55px;
+  padding: 0 8px;
+  z-index: 3;
+  cursor: pointer;
+}
+.iconMenu span{
+  display: none;
 }
 
