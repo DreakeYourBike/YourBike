@@ -124,7 +124,7 @@ main{
   margin: 10px;
   font-size: 1.6rem;
 }
-/*Empieza el section de ciclas de montain*/
+/*Empieza el section de mountainBikes*/
 .section--montainBike{
   height: auto;
   background-image:linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0, 0.2)), url('../multimedia/images/MontainBIke/montainBike.jpg');
@@ -237,6 +237,7 @@ main{
 .cityBike--container-imgBike .imgBike{
   width: 90%;
   max-width: 380px;
+  margin-bottom: 15px;
 }
 .cityBike--container-imgBike .imgBike:hover{
   width: 95%;
@@ -246,6 +247,11 @@ main{
   background-color: var(--black);
   color: var(--white);
   padding: 20px;
+}
+.section--contactForm h2{
+  font-size: 3.8rem;
+  text-align: center;
+  margin-bottom: 15px;
 }
 .container--contactForm{
   display: flex;

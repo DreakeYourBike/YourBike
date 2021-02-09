@@ -1,0 +1,432 @@
+:root{
+  --white: #fdfffc;
+  --black: #0b090a;
+  --red: #8d0801;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*Empieza el header*/
+header{
+  width: 100vw;
+  height: auto;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+.header--logo{
+  background-image: url("../multimedia/images/—Pngtree—mountain\ bike\ race_3290276.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  width: 45px;
+  height: 45px;
+  margin: 5px 0 5px 5px;
+  z-index: 4;
+}
+.header--list{
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+  margin-right: 30px;
+}
+.header--list li a{
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-decoration: none;
+  color:var(--white);
+}
+/*Animacion de linea bottom header*/
+.header--list li a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.header--list li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header--list li a::before {
+  content: " ";
+  display: block;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: red;
+  z-index: 2;
+  transition: transform .3s ease;
+  border-radius: 20px;
+  height: 2px;
+  position: relative;
+  top: 21px;
+}
+.iconMenu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: transparent;
+  height: 55px;
+  padding: 0 8px;
+  z-index: 3;
+  cursor: pointer;
+}
+.iconMenu span{
+  display: none;
+}
+
+
+
+/*Empieza el main*/
+main {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+.section--about{
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.section--about h1{
+  color: var(--black);
+  font-size: 3rem;
+  font-weight: bold;
+  border-top: 5px solid var(--red);
+  border-bottom: 5px solid var(--red);
+  width: 100vw;
+  text-align: center;
+}
+.section--about p{
+  background-color: var(--white);
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0 15px;
+}
+
+
+
+/*Empieza section accordion*/
+.section--accordion .accordion {
+  width: 80vw;
+  margin: 0 auto;
+}
+.section--accordion .accordion input {
+  display: none;
+}
+.section--accordion .box {
+  position: relative;
+  background: white;
+    height: auto;
+    transition: all .15s ease-in-out;
+}
+.section--accordion .box::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+.section--accordion .box-title {
+  font-size: 1.2rem;
+  line-height: 24px;
+  padding: 0 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.section--accordion .box-content {
+  width: calc(100% - 40px);
+  padding: 0px 30px 10px 30px;
+  font-size: 11pt;
+  color: rgba(0,0,0,.54);
+  display: none;
+}
+.section--accordion .box-close {
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+.section--accordion input:checked + .box .box-title {
+  border-bottom: 1px solid rgba(0,0,0,.18);
+}
+.section--accordion input:checked + .box .box-content,
+.section--accordion input:checked + .box .box-close {
+  display: inline-block;
+}
+.section--accordion .arrows section .box-title {
+  padding-left: 44px;
+  width: calc(100% - 64px);
+}
+.section--accordion .arrows section .box-title:before {
+  position: absolute;
+  display: block;
+  content: '\203a';
+  font-size: 18pt;
+  left: 20px;
+  top: -2px;
+  transition: transform .15s ease-in-out;
+  color: rgba(0,0,0,.54);
+}
+.section--accordion input:checked + section.box .box-title:before {
+  transform: rotate(90deg);
+}
+
+.section--accordion .box-content [type="checkbox"]:not(:checked) + label,
+.section--accordion .box-content [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--black);
+}
+
+/* checkbox aspect */
+.section--accordion .box-content [type="checkbox"]:not(:checked) + label:before,
+.section--accordion .box-content [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #aaa;
+  background: var(--white);
+  border-radius: 3px;
+}
+
+/* checked mark aspect */
+.section--accordion .box-content [type="checkbox"]:not(:checked) + label:after,
+.section--accordion .box-content [type="checkbox"]:checked + label:after {
+  content: '✕';
+  position: relative;
+  right: 6.6rem;
+  top: 0.1rem;
+  font-size: 1.6rem;
+  color: var(--red);
+  -webkit-transition: all .2s;
+      transition: all .2s;
+}
+.section--accordion .box-content [type="checkbox"]:not(:checked) + .label-1:after,
+.section--accordion .box-content [type="checkbox"]:checked + .label-1:after {
+  position: relative;
+  right: 7.2rem;
+  top: 0.1rem;
+}
+.section--accordion .box-content [type="checkbox"]:not(:checked) + .label-2:after,
+.section--accordion .box-content [type="checkbox"]:checked + .label-2:after {
+  position: relative;
+  right: 9rem;
+  top: 0.1rem;
+}
+.section--accordion .box-content [type="checkbox"]:not(:checked) + .label-3:after,
+.section--accordion .box-content [type="checkbox"]:checked + .label-3:after {
+  position: relative;
+  right: 10.3rem;
+  top: 0.1rem;
+}
+.section--accordion .box-content [type="checkbox"]:not(:checked) + .label-4:after,
+.section--accordion .box-content [type="checkbox"]:checked + .label-4:after {
+  position: relative;
+  right: 11rem;
+  top: 0.1rem;
+}
+.section--accordion .box-content [type="checkbox"]:not(:checked) + .label-size:after,
+.section--accordion .box-content [type="checkbox"]:checked + .label-size:after {
+  position: relative;
+  right: 4.9rem;
+  top: 0.1rem;
+}
+.section--accordion .box-content [type="checkbox"]:not(:checked) + .label-modelYear:after,
+.section--accordion .box-content [type="checkbox"]:checked + .label-modelYear:after {
+  position: relative;
+  right: 4.6rem;
+  top: 0.1rem;
+}
+
+/* checked mark aspect changes */
+.section--accordion .box-content [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
+      line-height: 20px;
+}
+.section--accordion .box-content p{
+  margin-top: 10px;
+}
+
+/*Star rating*/
+.section--accordion .rate {
+  margin-top: 6px;
+  position: relative;
+  right: 180px;
+}
+.section--accordion .rate:not(:checked) > label {
+  float:right;
+  width: 1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:2.4rem;
+  color:#ccc;
+}
+.section--accordion .rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.section--accordion .rate > input:checked ~ label {
+  color: #ffc700;    
+}
+
+
+/*Empieza el section de productos*/
+.section--products{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  gap: 25px;
+}
+.section--products a{
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+.container--products{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  box-shadow: -1px 1px 8px 0px black;
+  width: 45vw;
+  padding: 10px 0px;
+}
+.container--products p:first-child{
+  align-self: flex-start;
+  margin-left: 10px;
+  padding: 5px;
+  background-color: var(--red);
+  color: var(--black);
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 20px;
+  box-shadow: -1px 1px 8px 0px black;
+}
+.container--products picture{
+  display: flex;
+  justify-content: center;
+}
+.container--products img{
+  width: 85%;
+}
+.container--products .bikeName{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--black);
+}
+.container--products .bikePrice{
+  font-size: 2rem;
+  color: var(--red);
+}
+.container--products .bikeReview{
+  color: var(--black);
+}
+.container--products div span{
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:2.4rem;
+  color: #ffc700;
+}
+.container--products-overlay{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--black);
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 25px;
+  display: none;
+}
+.container--products-overlay p{
+  white-space: pre-line;
+  text-align: start;
+}
+.container--products-overlay .subTitule{
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--red);
+}
+.container--products-overlay p,li{
+  font-size: 1.2rem;
+}
+.container--products-overlay ul{
+  margin-top: 15px;
+  padding-left: 10px;
+}
+a:hover .container--products-overlay{
+  display: flex;
+}
+
+
+/*Empieza el footer*/
+footer{
+  width: 100vw;
+  height: 20px;
+  background-color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer p{
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px){
+  .section--about h1{
+    font-size: 3.5rem;
+  }
+  .section--about p{
+    font-size: 2.5rem;
+  }
+  .section--accordion .accordion {
+    width: 40vw;
+    margin: 0 auto;
+  }
+  .container--products-overlay .text, li{
+    font-size: 1.4rem;
+  }
+  .container--products-overlay .subTitule{
+    font-size: 2.5rem;
+  }
+}
