@@ -1,0 +1,56 @@
+
+.section--home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  
+  
+  /*Empieza el section de ciclas de montain*/
+  .section--montainBike{
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+  }
+  .montainBike--container-imgBike .imgBike{
+    width: 50vw;
+    margin: 0 20px;
+  }
+  .montainBike--container-imgBike .imgBike:hover{
+    width: 55vw;
+  }
+  
+  
+  
+  /*Empieza el section Road Bike*/
+  .section--roadBike{
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+  }
+  .roadBike--container-imgBike .imgBike{
+    width: 50vw;
+    border-radius: 40px;
+    margin: 20px;
+  }
+  .roadBike--container-imgBike .imgBike:hover{
+    width: 55vw;
+  }
+  
+  
+  
+  /*Empieza el section de City Bike*/
+  .section--cityBike{
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+  }
+  .cityBike--container-imgBike .imgBike{
+    width: 50vw;
+    margin: 20px;
+  }
+  .cityBike--container-imgBike .imgBike:hover{
+    width: 55vw;
+  }
